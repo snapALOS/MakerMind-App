@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MakerMind — The AI-powered operating system for artisan maker studios. Inventory, production, COGS, orders, and listings, unified and intelligent." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="MakerMind — The Artisan's OS for the Modern Studio" />
+  <meta property="og:description" content="The business side of making, beautifully organized. Launching soon." />
+  <meta property="og:image" content="assets/img1.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MakerMind — The Artisan's OS" />
+  <meta name="twitter:description" content="The business side of making, beautifully organized." />
+  <meta name="twitter:image" content="assets/img1.png" />
+
+  <title>MakerMind — The Artisan's OS for the Modern Studio</title>
+
+  <!-- Favicon (SVG inline) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg viewBox='0 0 512 512' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='512' height='512' rx='100' fill='%23F7F5F0'/%3E%3Crect x='142' y='172' width='38' height='252' fill='%231C1C1C'/%3E%3Crect x='120' y='172' width='22' height='14' fill='%231C1C1C'/%3E%3Crect x='332' y='172' width='38' height='252' fill='%231C1C1C'/%3E%3Crect x='370' y='172' width='22' height='14' fill='%231C1C1C'/%3E%3Cpath d='M161 182L256 324L351 182' stroke='%231C1C1C' stroke-width='38' stroke-linejoin='bevel' fill='none'/%3E%3Ccircle cx='256' cy='324' r='36' fill='%23D44D26'/%3E%3C/svg%3E" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════════
+       NAV
+       ═══════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" aria-label="MakerMind home">
+        <svg class="nav-logo" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
+          <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
+          <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
+          <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
+          <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
+          <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
+          <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" stroke-linecap="butt" fill="none"/>
+          <path d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <circle cx="256" cy="324" r="36" fill="#D44D26"/>
+          <line x1="256" y1="362" x2="256" y2="472" stroke="#D44D26" stroke-width="12" stroke-dasharray="14 14"/>
+        </svg>
+        <span class="nav-wordmark">MakerMind<span class="accent">*</span></span>
+      </a>
+      <a href="#waitlist" class="btn btn-nav">Join Waitlist</a>
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+
+      <div class="stamp reveal">
+        <span class="stamp-dot" aria-hidden="true"></span>
+        Studio Protocol v0.1
+        <span class="stamp-sep" aria-hidden="true">—</span>
+        Coming Soon
+      </div>
+
+      <h1 class="hero-headline reveal">
+        The business side<br>
+        of making,<br>
+        <em>beautifully organized.</em>
+      </h1>
+
+      <div class="hero-rule reveal" aria-hidden="true"></div>
+
+      <p class="hero-body reveal">
+        MakerMind is an AI-powered operating system for artisan maker studios.<br class="br-desk">
+        Inventory, production, COGS, orders, and listings — unified and intelligent.
+      </p>
+
+      <form class="waitlist-form reveal" id="hero-form" data-form="waitlist-hero" novalidate>
+        <div class="form-row">
+          <input
+            type="email"
+            name="email"
+            placeholder="your@studio.com"
+            required
+            class="form-input"
+            aria-label="Your email address"
+          />
+          <button type="submit" class="btn btn-primary">
+            Join the Waitlist <span class="btn-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+        <p class="form-note">No spam. Just the launch. Unsubscribe anytime.</p>
+        <div class="form-success" hidden aria-live="polite">
+          <span class="success-mark" aria-hidden="true">✦</span>
+          You're on the list — we'll be in touch before launch.
+        </div>
+      </form>
+
+      <div class="hero-stats reveal" aria-label="Quick facts">
+        <div class="stat">
+          <span class="stat-n">3</span>
+          <span class="stat-label">Sales channels</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-n">AI<span class="accent">*</span></span>
+          <span class="stat-label">Native from day one</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-n">1</span>
+          <span class="stat-label">OS for your studio</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Hero product image -->
+    <div class="hero-img-wrap reveal">
+      <img
+        src="assets/img1.png"
+        alt="MakerMind studio dashboard showing revenue, inventory, AI insights and connected sales channels"
+        class="hero-img"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       TRUST BAR
+       ═══════════════════════════════════════════════ -->
+  <div class="trust-bar" aria-label="Integrations and key features">
+    <div class="trust-inner">
+      <span class="trust-item">
+        <svg class="trust-dot" viewBox="0 0 8 8" fill="currentColor" aria-hidden="true"><circle cx="4" cy="4" r="4"/></svg>
+        Shopify, Etsy &amp; Square
+      </span>
+      <span class="trust-sep" aria-hidden="true">·</span>
+      <span class="trust-item">Ingredient-level COGS</span>
+      <span class="trust-sep" aria-hidden="true">·</span>
+      <span class="trust-item">AI-drafted product listings</span>
+      <span class="trust-sep" aria-hidden="true">·</span>
+      <span class="trust-item">Built for small-batch makers</span>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════
+       THE PROBLEM
+       ═══════════════════════════════════════════════ -->
+  <section class="section-pad problem" aria-labelledby="problem-heading">
+    <div class="container">
+
+      <p class="section-label reveal">The Problem</p>
+
+      <h2 class="section-headline reveal" id="problem-heading">
+        You make extraordinary things.<br>
+        Your software <em>shouldn't hold you back.</em>
+      </h2>
+
+      <div class="problem-grid">
+        <div class="problem-card reveal">
+          <div class="problem-num" aria-hidden="true">01</div>
+          <h3 class="problem-title">The Spreadsheet Trap</h3>
+          <p class="problem-body">Your COGS live in one tab. Orders in another. Inventory in a third. Nothing talks to anything — and pricing is always a guess.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-num" aria-hidden="true">02</div>
+          <h3 class="problem-title">The Margin Mystery</h3>
+          <p class="problem-body">You know what you charge. You're less sure what it costs. Material waste, labor, packaging, platform fees — the real number stays hidden.</p>
+        </div>
+        <div class="problem-card reveal">
+          <div class="problem-num" aria-hidden="true">03</div>
+          <h3 class="problem-title">The Inventory Tangle</h3>
+          <p class="problem-body">Stock runs out mid-batch. You reorder too early or too late. When you sell on three channels, knowing what's available is anyone's guess.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       PRODUCT WALKTHROUGH
+       ═══════════════════════════════════════════════ -->
+  <section id="product" aria-labelledby="product-heading">
+    <div class="sr-only" id="product-heading">Product features</div>
+
+    <!-- 01 — Demand Ledger -->
+    <div class="walk-row">
+      <div class="walk-text reveal">
+        <p class="walk-label">01 — Demand Ledger</p>
+        <h2 class="walk-headline">Orders, inventory, and channels —<br><em>finally in sync.</em></h2>
+        <div class="walk-rule" aria-hidden="true"></div>
+        <p class="walk-body">One unified view of every order across Shopify, Etsy, and Square. Live pipeline, channel density, and sales velocity — no manual reconciliation required.</p>
+        <ul class="walk-list" aria-label="Demand Ledger features">
+          <li>Real-time order flow from all sales channels</li>
+          <li>Automatic inventory deduction on fulfillment</li>
+          <li>Sales velocity and channel density at a glance</li>
+        </ul>
+      </div>
+      <div class="walk-img-wrap reveal">
+        <img
+          src="assets/img2.png"
+          alt="MakerMind Demand Ledger showing unified order flow with Shopify, Etsy and Square"
+          class="walk-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- 02 — Production Planner -->
+    <div class="walk-row walk-row-flip">
+      <div class="walk-text reveal">
+        <p class="walk-label">02 — Production Planner</p>
+        <h2 class="walk-headline">Intelligence for the studio<br><em>behind every product.</em></h2>
+        <div class="walk-rule" aria-hidden="true"></div>
+        <p class="walk-body">AI-recommended batch sizes based on demand forecasting and current stock. Schedule production runs, track status, and stop guessing your next move.</p>
+        <ul class="walk-list" aria-label="Production Planner features">
+          <li>AI-recommended batch sizes from live demand data</li>
+          <li>Production job scheduling and status tracking</li>
+          <li>Proactive advisory alerts before stockouts hit</li>
+        </ul>
+      </div>
+      <div class="walk-img-wrap reveal">
+        <img
+          src="assets/img3.png"
+          alt="MakerMind Production Planner with AI Advisory showing recommended batch sizes"
+          class="walk-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- 03 — COGS & Financial Ledger -->
+    <div class="walk-row">
+      <div class="walk-text reveal">
+        <p class="walk-label">03 — COGS Analyzer</p>
+        <h2 class="walk-headline">Know your margins.<br><em>Move with confidence.</em></h2>
+        <div class="walk-rule" aria-hidden="true"></div>
+        <p class="walk-body">Ingredient-level cost of goods for every product you make. Materials, labor, packaging — broken down precisely so you price with certainty, not hope.</p>
+        <ul class="walk-list" aria-label="COGS Analyzer features">
+          <li>Per-ingredient cost breakdown by batch</li>
+          <li>Gross margin tracking per product and run</li>
+          <li>Financial Ledger with revenue and expense view</li>
+        </ul>
+      </div>
+      <div class="walk-img-wrap reveal">
+        <img
+          src="assets/img8.png"
+          alt="MakerMind COGS Analyzer and Financial Ledger showing gross margin and expense breakdown"
+          class="walk-img"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FEATURES GRID
+       ═══════════════════════════════════════════════ -->
+  <section class="section-pad features" aria-labelledby="features-heading">
+    <div class="container">
+
+      <p class="section-label reveal">Everything in the studio</p>
+      <h2 class="section-headline reveal" id="features-heading">
+        Six tools. <em>One operating system.</em>
+      </h2>
+
+      <div class="features-grid">
+
+        <article class="feature-card reveal">
+          <div class="feature-glyph" aria-hidden="true">⬡</div>
+          <h3 class="feature-title">Stockroom</h3>
+          <p class="feature-body">Raw materials and finished goods in one living inventory. Reorder thresholds, lot tracking, and real-time availability — always current.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-glyph" aria-hidden="true">◷</div>
+          <h3 class="feature-title">Planner</h3>
+          <p class="feature-body">Production scheduling built for makers. Batch jobs, market dates, drop calendars — the whole studio, in one view.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-glyph" aria-hidden="true">◈</div>
+          <h3 class="feature-title">COGS Analyzer</h3>
+          <p class="feature-body">Ingredient-level cost of goods, down to the milliliter. Know your true margin on every product before you set the price.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-glyph" aria-hidden="true">✦</div>
+          <h3 class="feature-title">AI Cataloger</h3>
+          <p class="feature-body">Product listings drafted in your voice. AI-generated descriptions optimized for Etsy, Shopify, and every channel you sell on.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-glyph" aria-hidden="true">⟁</div>
+          <h3 class="feature-title">Demand Ledger</h3>
+          <p class="feature-body">Unified order flow from Shopify, Etsy, and Square. Live pipeline, velocity metrics, and channel density — no dashboard-switching required.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-glyph" aria-hidden="true">◎</div>
+          <h3 class="feature-title">Artisan Assistant</h3>
+          <p class="feature-body">Ask anything about your studio. The AI advisor that knows your inventory, your orders, and your margins — and tells you what to do next.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       POSITIONING — DARK
+       ═══════════════════════════════════════════════ -->
+  <section class="positioning" aria-label="Product positioning">
+    <div class="pos-inner">
+      <p class="pos-line reveal">Built for the artisan.</p>
+      <div class="pos-rule reveal" aria-hidden="true"></div>
+      <p class="pos-line reveal">Powered by intelligence.</p>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       STUDIO PROTOCOL — NEWSLETTER
+       ═══════════════════════════════════════════════ -->
+  <section class="section-pad newsletter" id="protocol" aria-labelledby="newsletter-heading">
+    <div class="container newsletter-layout">
+
+      <div class="newsletter-copy reveal">
+        <p class="section-label">The Studio Protocol</p>
+        <h2 class="newsletter-headline" id="newsletter-heading">
+          Weekly dispatch for the<br><em>modern maker studio.</em>
+        </h2>
+        <p class="newsletter-body">
+          Pricing, production, margins, and operations — written for makers, not MBAs.
+          No noise. No filler. Just the numbers and moves that keep a studio running.
+        </p>
+        <ul class="check-list" aria-label="What you'll receive">
+          <li>COGS and pricing deep-dives</li>
+          <li>Maker studio operations playbooks</li>
+          <li>Early access to MakerMind features</li>
+          <li>Behind-the-scenes of building the studio OS</li>
+        </ul>
+      </div>
+
+      <div class="newsletter-card reveal" aria-label="Newsletter signup">
+        <div class="newsletter-card-brand">
+          <svg class="newsletter-mark" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
+            <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
+            <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
+            <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
+            <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
+            <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
+            <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" stroke-linecap="butt" fill="none"/>
+            <path d="M 190 362 Q 256 418 322 362" stroke="#BFBAB0" stroke-width="5" stroke-linecap="round" fill="none"/>
+            <circle cx="256" cy="324" r="36" fill="#D44D26"/>
+            <line x1="256" y1="362" x2="256" y2="472" stroke="#D44D26" stroke-width="12" stroke-dasharray="14 14"/>
+          </svg>
+          <div>
+            <div class="newsletter-card-title">Studio Protocol</div>
+            <div class="newsletter-card-sub">by MakerMind</div>
+          </div>
+        </div>
+
+        <form class="waitlist-form" id="newsletter-form" data-form="newsletter" novalidate>
+          <label class="form-label" for="newsletter-email">Your email address</label>
+          <input
+            id="newsletter-email"
+            type="email"
+            name="email"
+            placeholder="your@studio.com"
+            required
+            class="form-input form-input-full"
+          />
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top: 10px;">
+            Subscribe to the Protocol →
+          </button>
+          <p class="form-note" style="text-align:left; margin-top:12px;">Free forever. Unsubscribe anytime.</p>
+          <div class="form-success" hidden aria-live="polite">
+            <span class="success-mark" aria-hidden="true">✦</span>
+            Welcome to the Protocol — first issue coming soon.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FINAL CTA
+       ═══════════════════════════════════════════════ -->
+  <section class="final-cta section-pad" id="waitlist" aria-labelledby="cta-heading">
+    <div class="final-bg" aria-hidden="true">
+      <img src="assets/img9.png" alt="" class="final-bg-img" />
+    </div>
+    <div class="container final-inner">
+
+      <p class="section-label reveal" style="color: rgba(226,223,214,0.5);">Studio Protocol v0.1</p>
+
+      <h2 class="final-headline reveal" id="cta-heading">
+        Ready to run your studio<br><em>like it means business?</em>
+      </h2>
+
+      <p class="final-subhead reveal">
+        Early access. Founder pricing. No commitment.
+      </p>
+
+      <form class="waitlist-form waitlist-form-dark reveal" id="cta-form" data-form="waitlist-cta" novalidate>
+        <div class="form-row">
+          <input
+            type="email"
+            name="email"
+            placeholder="your@studio.com"
+            required
+            class="form-input form-input-dark"
+            aria-label="Your email address"
+          />
+          <button type="submit" class="btn btn-accent">
+            Join the Waitlist →
+          </button>
+        </div>
+        <div class="form-success form-success-light" hidden aria-live="polite">
+          <span class="success-mark" aria-hidden="true">✦</span>
+          You're on the list. We'll be in touch before launch day.
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-top">
+      <a href="#" class="footer-brand" aria-label="MakerMind home">
+        <svg class="footer-logo" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="142" y="172" width="38" height="252" fill="currentColor"/>
+          <rect x="120" y="172" width="22" height="14" fill="currentColor"/>
+          <rect x="126" y="186" width="14" height="8" fill="currentColor"/>
+          <rect x="332" y="172" width="38" height="252" fill="currentColor"/>
+          <rect x="370" y="172" width="22" height="14" fill="currentColor"/>
+          <rect x="370" y="186" width="14" height="8" fill="currentColor"/>
+          <path d="M 161 182 L 256 324 L 351 182" stroke="currentColor" stroke-width="38" stroke-linejoin="bevel" stroke-linecap="butt" fill="none"/>
+          <path d="M 190 362 Q 256 418 322 362" stroke="#4a4640" stroke-width="5" stroke-linecap="round" fill="none"/>
+          <circle cx="256" cy="324" r="36" fill="#D44D26"/>
+          <line x1="256" y1="362" x2="256" y2="472" stroke="#D44D26" stroke-width="12" stroke-dasharray="14 14"/>
+        </svg>
+        <span class="footer-wordmark">MakerMind<span class="accent">*</span></span>
+      </a>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="https://twitter.com/makermindai" class="footer-link" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://instagram.com/makermindai" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://producthunt.com" class="footer-link" target="_blank" rel="noopener">ProductHunt</a>
+        <a href="mailto:hello@makermind.ai" class="footer-link">Contact</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-rule" aria-hidden="true"></div>
+      <div class="footer-meta">
+        <span class="footer-stamp">Studio Protocol v0.1 — Coming Soon</span>
+        <span class="footer-copy">© 2026 MakerMind. For the modern studio.</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
